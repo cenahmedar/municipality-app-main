@@ -1,0 +1,71 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'user.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+User _$UserFromJson(Map<String, dynamic> json) => User(
+      eFirstName: json['eFirstName'] as String?,
+      aFirstName: json['aFirstName'] as String?,
+      eMiddleName: json['eMiddleName'] as String?,
+      aMiddleName: json['aMiddleName'] as String?,
+      eFamilyName: json['eFamilyName'] as String?,
+      aFamilyName: json['aFamilyName'] as String?,
+      idCarNumber: json['idCarNumber'] as String?,
+      passportNumber: json['passportNumber'] as String?,
+      dateOfBirth: json['dateOfBirth'] as String?,
+      placeOfBirth: json['placeOfBirth'] as String?,
+      addressLine1: json['addressLine1'] as String?,
+      addressLine2: json['addressLine2'] as String?,
+      telephone: json['telephone'] as String?,
+      mobile: json['mobile'] as String?,
+      profession: json['profession'] as String?,
+      isapproved: boolFromString(json['IsApproved']),
+      aGrandName: json['aGrandName'] as String?,
+      eGrandName: json['eGrandName'] as String?,
+      email: json['email'] as String?,
+      financialSystemRefNumber: json['financialSystemRefNumber'] as String?,
+      fax: json['fax'] as String?,
+      id: json['id'] as String?,
+      username: json['iUserName'] as String?,
+      userType: json['UserType'] as String?,
+      isSmsVerify: boolFromString(json['isSmsVerify']),
+      isAccept: boolFromString(json['isaccept']),
+      isActive: boolFromString(json['isactive']),
+      isBlocked: boolFromString(json['isblocked']),
+      profilePicture: json['ProfilePicture'] as String?,
+    );
+
+Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
+      'id': instance.id,
+      'iUserName': instance.username,
+      'UserType': instance.userType,
+      'isSmsVerify': instance.isSmsVerify,
+      'isactive': instance.isActive,
+      'isblocked': instance.isBlocked,
+      'isaccept': instance.isAccept,
+      'eFirstName': instance.eFirstName,
+      'aFirstName': instance.aFirstName,
+      'eMiddleName': instance.eMiddleName,
+      'aMiddleName': instance.aMiddleName,
+      'eFamilyName': instance.eFamilyName,
+      'aFamilyName': instance.aFamilyName,
+      'idCarNumber': instance.idCarNumber,
+      'passportNumber': instance.passportNumber,
+      'dateOfBirth': instance.dateOfBirth,
+      'placeOfBirth': instance.placeOfBirth,
+      'addressLine1': instance.addressLine1,
+      'addressLine2': instance.addressLine2,
+      'telephone': instance.telephone,
+      'mobile': instance.mobile,
+      'profession': instance.profession,
+      'IsApproved': instance.isapproved,
+      'aGrandName': instance.aGrandName,
+      'eGrandName': instance.eGrandName,
+      'email': instance.email,
+      'financialSystemRefNumber': instance.financialSystemRefNumber,
+      'fax': instance.fax,
+      'ProfilePicture': instance.profilePicture,
+    };

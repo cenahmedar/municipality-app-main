@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$/../../../app" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="android" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":app" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" />
+        <option name="LAST_KNOWN_AGP_VERSION" value="7.4.1" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="beitjalaProductionDebug" />
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/beitjala/res;file://$MODULE_DIR$/../../../app/src/production/res;file://$MODULE_DIR$/../../../app/src/beitjalaProduction/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/src/beitjalaProductionDebug/res;file://$MODULE_DIR$/../../../../build/app/generated/res/rs/beitjalaProduction/debug;file://$MODULE_DIR$/../../../../build/app/generated/res/resValues/beitjalaProduction/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestBeitjala/res;file://$MODULE_DIR$/../../../app/src/androidTestProduction/res;file://$MODULE_DIR$/../../../app/src/androidTestBeitjalaProduction/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/src/androidTestBeitjalaProductionDebug/res;file://$MODULE_DIR$/../../../../build/app/generated/res/rs/androidTest/beitjalaProduction/debug;file://$MODULE_DIR$/../../../../build/app/generated/res/resValues/androidTest/beitjalaProduction/debug" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../../build/app/tmp/kotlin-classes/beitjalaProductionDebug" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/transforms-3/2062b54daf641e381d61b8c3a8565f94/transformed/multidex-2.0.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/db1ec9e34c8ba666dbc0de7790140125/transformed/jetified-flutter_embedding_debug-1.0.0-57d3bac3dd5cb5b0e464ab70e7bc8a0d8cf083ab.jar:/Users/fadikhayo/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.2.0/cd3478503da69b1a7e0319bd2d1389943db9b364/lifecycle-common-java8-2.2.0.jar:/Users/fadikhayo/.gradle/caches/transforms-3/8bfa4cbf55439e94b62e05fd696087e5/transformed/fragment-1.1.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/e58cf6e39d0ab38f354e58a46f431c0d/transformed/viewpager-1.0.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/2b936c21f88fc8f3a5416874aec06b97/transformed/loader-1.0.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/0acf48b1eb973ca2ce0786e85ae98eb5/transformed/jetified-activity-1.0.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/2402edc33e696b42af80dd3830af89cd/transformed/customview-1.0.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/d8686cd6d463e55da07d7cb72e73970a/transformed/core-1.6.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/1a011394cf5b05b83715a4e3f1688f84/transformed/lifecycle-runtime-2.2.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/2a837de91a8ec267c3420e595b7dc69f/transformed/jetified-savedstate-1.0.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/c702aeaae720c0056242252a1bfbc987/transformed/lifecycle-livedata-2.0.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/fade3cb5779a28af998fbf543613206f/transformed/lifecycle-livedata-core-2.0.0-api.jar:/Users/fadikhayo/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/4ef09a745007778eef83b92f8f23987a8ea59496/lifecycle-common-2.2.0.jar:/Users/fadikhayo/.gradle/caches/transforms-3/9c25f852486d395a41e40bd239498f87/transformed/core-runtime-2.0.0-api.jar:/Users/fadikhayo/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar:/Users/fadikhayo/.gradle/caches/transforms-3/cc1649980c05cf0e493bbf461578a4b6/transformed/versionedparcelable-1.1.1-api.jar:/Users/fadikhayo/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar:/Users/fadikhayo/.gradle/caches/transforms-3/be173ab695dafd88c5d933d977fb6480/transformed/lifecycle-viewmodel-2.1.0-api.jar:/Users/fadikhayo/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.2.0/57136ff68ee784c6e19db34ed4a175338fadfde1/annotation-1.2.0.jar:/Users/fadikhayo/.gradle/caches/transforms-3/021c40fffbe859b33f76635161eac279/transformed/jetified-annotation-experimental-1.1.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/384b2a5292d0ca2076900b4ce844f6c2/transformed/jetified-tracing-1.0.0-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/3b74ba2f33f050c4f4f3c4162790d803/transformed/jetified-window-java-1.0.0-beta04-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/4e575411c39fb1ec942c639ac65941fa/transformed/jetified-window-1.0.0-beta04-api.jar:/Users/fadikhayo/.gradle/caches/transforms-3/b92ff86fec88d593b26f0b46e619dc4f/transformed/jetified-kotlinx-coroutines-android-1.5.2.jar:/Users/fadikhayo/.gradle/caches/transforms-3/58bfb6dd31b4f00553157914eade9711/transformed/jetified-kotlinx-coroutines-core-jvm-1.5.2.jar:/Users/fadikhayo/.gradle/caches/transforms-3/8b80b272d96c9325d1e59d348fe02520/transformed/jetified-kotlin-stdlib-jdk8-1.5.30.jar:/Users/fadikhayo/.gradle/caches/transforms-3/f2e9ce78e43db0b8c2b65b5835998337/transformed/jetified-kotlin-stdlib-jdk7-1.5.30.jar:/Users/fadikhayo/.gradle/caches/transforms-3/4c5f3c0e2993b3cff0ea5cf06fe2f4a3/transformed/jetified-kotlin-stdlib-1.5.31.jar:/Users/fadikhayo/.gradle/caches/transforms-3/356d35e1328370b57da7a0e0043a73ea/transformed/jetified-annotations-13.0.jar:/Users/fadikhayo/.gradle/caches/transforms-3/ff231945d12ee2451a231fb961dc96e5/transformed/jetified-kotlin-stdlib-common-1.5.31.jar:/Users/fadikhayo/.gradle/caches/transforms-3/57550e3a9e05bf34d73fd5feaf7ae371/transformed/jetified-armeabi_v7a_debug-1.0.0-57d3bac3dd5cb5b0e464ab70e7bc8a0d8cf083ab.jar:/Users/fadikhayo/.gradle/caches/transforms-3/dfa6ed92ebd6345e9296632d0241bd66/transformed/jetified-arm64_v8a_debug-1.0.0-57d3bac3dd5cb5b0e464ab70e7bc8a0d8cf083ab.jar:/Users/fadikhayo/.gradle/caches/transforms-3/77c06ffd15b1caac50121fa82e03eca5/transformed/jetified-x86_64_debug-1.0.0-57d3bac3dd5cb5b0e464ab70e7bc8a0d8cf083ab.jar:/Users/fadikhayo/.gradle/caches/transforms-3/7f727c32a27fa1b9b53d318b7cf1adf6/transformed/jetified-x86_debug-1.0.0-57d3bac3dd5cb5b0e464ab70e7bc8a0d8cf083ab.jar:/Users/fadikhayo/Library/Android/sdk/platforms/android-32/android.jar:/Users/fadikhayo/Library/Android/sdk/build-tools/30.0.2/core-lambda-stubs.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="app_beitjalaProductionDebug" />
+          <option name="jvmTarget" value="1.6" />
+          <option name="languageVersion" value="1.4" />
+          <option name="apiVersion" value="1.4" />
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../../build/app/intermediates/javac/beitjalaProductionDebug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../../build/app/intermediates/javac/beitjalaProductionDebugUnitTest/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../app">
+      <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 33, extension level 3 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

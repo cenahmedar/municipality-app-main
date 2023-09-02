@@ -1,0 +1,1 @@
+ flutter build appbundle -t lib/environments/beitunia/production/main_production.dart --flavor beituniaProduction --release

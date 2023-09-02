@@ -1,0 +1,15 @@
+{
+    "defaultLocale": "en-US",
+    "locales": [
+        "en-US",
+        "ar-AR"
+    ],
+    "localePath": "i18n",
+    "generatedPath": "lib/generated",
+    "ltr": [
+        "en-US"
+    ],
+    "rtl": [
+        "ar-AR"
+    ]
+}
