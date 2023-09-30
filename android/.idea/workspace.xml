@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="592f002e-4dd9-4546-8429-3499ea000126" name="Default Changelist" comment="" />
+    <list default="true" id="592f002e-4dd9-4546-8429-3499ea000126" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../assets/icons/jawwal_pay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../assets/icons/jawwal_reactangle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../assets/images/baladia_logo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../assets/images/jawwal_rectangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/pages/jawwal_pay_service/screens/jawwal_pay_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/pages/jawwal_pay_service/widgets/jawwal_logo_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/resources/font_manager.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/resources/styles_manager.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lib/resources/values_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/../.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/environments/beit_jala/production/production.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/environments/beit_jala/production/production.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/environments/beitunia/production/production.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/environments/beitunia/production/production.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/environments/beitunia/production/production.json" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/environments/beitunia/production/production.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/models/attachment_type.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/models/attachment_type.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/models/request.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/models/request.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/models/request_progress.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/models/request_progress.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/models/service_field_model.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/models/service_field_model.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/models/service_model.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/models/service_model.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/models/uploaded_file.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/models/uploaded_file.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/pages/my_bills_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/pages/my_bills_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/utils/colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/utils/colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

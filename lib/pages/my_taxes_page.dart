@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:municipality_app/generated/i18n.dart';
 import 'package:municipality_app/models/tax.dart';
-import 'package:municipality_app/pages/jawwal_pay_page.dart';
 import 'package:municipality_app/services/bills_service.dart';
 import 'package:municipality_app/services/jawwal_pay_service.dart';
-import 'package:municipality_app/utils/snackbar.dart';
 import 'package:municipality_app/widgets/money_amount_card.dart';
 import 'package:municipality_app/widgets/main_app_bar.dart';
 import 'package:municipality_app/widgets/menu_drawer.dart';
+
+import 'jawwal_pay_service/screens/jawwal_pay_page.dart';
 
 class MyTaxesPage extends StatefulWidget {
   @override
@@ -75,35 +75,17 @@ class _MyTaxesPageState extends State<MyTaxesPage> {
                                 titleValue: _taxes[index].taxName,
                                 sourcePage: I18n.of(context)!.my_bills,
                                 onClick: () async {
-                                  setState(() {
-                                    _loading = true;
-                                  });
-                                  String? paymentKey =
-                                      await _jawwalPayService.payBill(
-                                          amount: _taxes[index]
-                                              .taxAmount
-                                              .toString(),
-                                          billId: _taxes[index].ptid);
-                                  setState(() {
-                                    _loading = false;
-                                  });
-                                  if (paymentKey != null) {
-                                    Navigator.of(context).push(
-                                      MaterialPageRoute(
-                                        builder: (context) => JawwalPayPage(
-                                          paymentKey: paymentKey,
-                                          ptId: _taxes[index].ptid,
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => JawwalPayPage(
+                                        jawwalPayArgs: JawwalPayArgs(
+                                          paymentType: PaymentType.TAX,
+                                          id: _taxes[index].ptid,
+                                          amount: _taxes[index].taxAmount,
                                         ),
                                       ),
-                                    );
-                                    return;
-                                  }
-                                  setState(() {
-                                    _loading = false;
-                                  });
-                                  SnackbarUtil.showSnackbar(context,
-                                      message: I18n.of(context)!
-                                          .there_was_an_issue_try_again_later);
+                                    ),
+                                  );
                                 },
                               ),
                             ).toList(),

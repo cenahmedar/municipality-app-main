@@ -99,6 +99,16 @@ const kDarkBgLight = Color(0xff282D39);
 
 const KSilver = Color(0xffc4c4c4);
 
+/// color of jawwal
+const JGreen = Color(0xFF6ABF4B);
+const JTeal61 = Color(0xFF61D0C5);
+const JWhiteCC = Color(0xFFCCDAED);
+const JTeal9C = Color(0xFF9CBDCE);
+const JTeal74 = Color(0xFF7494BA);
+const JDivider = Color(0xffadabab);
+const JTextColor = Color(0xFF434343);
+const JRedColor = Color(0xFFFD4657);
+
 // 100% — FF
 // 99% — FC
 // 98% — FA

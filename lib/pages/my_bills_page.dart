@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:municipality_app/generated/i18n.dart';
 import 'package:municipality_app/models/bill.dart';
-import 'package:municipality_app/pages/jawwal_pay_page.dart';
 import 'package:municipality_app/services/bills_service.dart';
 import 'package:municipality_app/services/jawwal_pay_service.dart';
-import 'package:municipality_app/utils/snackbar.dart';
 import 'package:municipality_app/widgets/money_amount_card.dart';
 import 'package:municipality_app/widgets/main_app_bar.dart';
 import 'package:municipality_app/widgets/menu_drawer.dart';
+
+import 'jawwal_pay_service/screens/jawwal_pay_page.dart';
 
 class MyBillsPage extends StatefulWidget {
   @override
@@ -18,8 +18,6 @@ class _MyBillsPageState extends State<MyBillsPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   List<Bill> _bills = [];
   BillsService _billsService = BillsService();
-  JawwalPayService _jawwalPayService = JawwalPayService();
-
   bool _loading = true;
 
   @override
@@ -77,35 +75,17 @@ class _MyBillsPageState extends State<MyBillsPage> {
                                 titleValue: _bills[index].invoiceNo ?? '',
                                 sourcePage: I18n.of(context)!.my_bills,
                                 onClick: () async {
-                                  setState(() {
-                                    _loading = true;
-                                  });
-                                  String? paymentKey =
-                                      await _jawwalPayService.payBill(
-                                          amount: _bills[index]
-                                              .invoiceAmount
-                                              .toString(),
-                                          billId:
-                                              _bills[index].invoiceNo ?? '');
-                                  setState(() {
-                                    _loading = false;
-                                  });
-                                  if (paymentKey != null) {
-                                    Navigator.of(context).push(
-                                      MaterialPageRoute(
-                                        builder: (context) => JawwalPayPage(
-                                          paymentKey: paymentKey,
-                                          invoiceNo: _bills[index].invoiceNo,
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => JawwalPayPage(
+                                        jawwalPayArgs: JawwalPayArgs(
+                                          paymentType: PaymentType.BILL,
+                                          id: _bills[index].invoiceNo,
+                                          amount: _bills[index].invoiceAmount,
                                         ),
                                       ),
-                                    );
-
-                                    return;
-                                  }
-
-                                  SnackbarUtil.showSnackbar(context,
-                                      message: I18n.of(context)!
-                                          .there_was_an_issue_try_again_later);
+                                    ),
+                                  );
                                 },
                               ),
                             ).toList(),

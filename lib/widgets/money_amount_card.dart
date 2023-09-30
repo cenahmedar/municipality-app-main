@@ -52,7 +52,7 @@ class MoneyAmountCardWidget extends StatelessWidget {
           vertical: 12,
           horizontal: 16,
         ),
-        margin: EdgeInsets.only(bottom: 17),
+        margin: EdgeInsets.only(bottom: 17, left: 3, right: 3),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(19),
@@ -60,7 +60,7 @@ class MoneyAmountCardWidget extends StatelessWidget {
             BoxShadow(
               color: Color(0xFFB6C6D4),
               spreadRadius: 1,
-              blurRadius: 8,
+              blurRadius: 2,
               offset: Offset(1, 1),
             ),
           ],
