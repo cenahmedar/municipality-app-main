@@ -9,7 +9,7 @@ part of 'production.dart';
 const _$configJsonLiteral = {
   'env': 'PROD',
   'production': true,
-  'base_url': 'http://213.6.103.110:9900/EmunAPI/v1/',
+  'base_url': 'http://app.beitjala-emun.org:9900/EmunAPI/v1/',
   'primary_color': '#4B7B89',
   'secondary_color': '#6ABAD1',
   'logo': 'assets/images/beit_jala_municipality.png',

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90a1bbc9-d7c4-487a-bb5c-26e618418658" name="Changes" comment="">
+    <list default="true" id="90a1bbc9-d7c4-487a-bb5c-26e618418658" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/environments/beit_jala/production/production.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/environments/beit_jala/production/production.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/environments/beit_jala/production/production.json" beforeDir="false" afterPath="$PROJECT_DIR$/lib/environments/beit_jala/production/production.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,12 @@
       <recent name="D:\MyAndroidAdv\Flutter\municipality-app-main\lib\pages\jawwal_pay_service" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.beituniaProduction">
+  <component name="RunManager" selected="Flutter.beitjalaProduction">
+    <configuration name="beitjalaProduction" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="additionalArgs" value="--flavor beitjalaProduction" />
+      <option name="filePath" value="$PROJECT_DIR$/lib/environments/beit_jala/production/main_production.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="beituniaProduction" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
       <option name="additionalArgs" value="--flavor beituniaProduction" />
       <option name="filePath" value="$PROJECT_DIR$/lib/environments/beitunia/production/main_production.dart" />
@@ -57,6 +64,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Flutter.beitjalaProduction" />
       <item itemvalue="Flutter.main_production.dart (1)" />
       <item itemvalue="Flutter.beituniaProduction" />
     </list>
@@ -76,6 +84,14 @@
       <option name="presentableId" value="Default" />
       <updated>1692447817970</updated>
     </task>
+    <task id="LOCAL-00001" summary="fixes">
+      <created>1702719006205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702719006205</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +104,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
