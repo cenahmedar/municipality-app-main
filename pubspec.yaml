@@ -35,9 +35,6 @@ dependencies:
   # Bloc for state management.
   flutter_bloc: ^7.0.1
 
-  # URL opener
-  url_launcher: ^6.0.4
-
   # Comparison
   equatable: ^2.0.2
 

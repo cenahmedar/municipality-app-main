@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90a1bbc9-d7c4-487a-bb5c-26e618418658" name="Changes" comment="beitjala">
-      <change afterPath="$PROJECT_DIR$/lib/widgets/bills_filter_card.dart" afterDir="false" />
+    <list default="true" id="90a1bbc9-d7c4-487a-bb5c-26e618418658" name="Changes" comment="beitjalanew filter and dropdown">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/i18n/ar-AR.json" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/ar-AR.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/i18n/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/en-US.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/i18n.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/i18n.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/bill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/bill.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/bill.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/bill.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/tax.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/tax.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/tax.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/tax.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/auth/signin_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/auth/signin_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/my_bills_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/my_bills_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/my_taxes_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/my_taxes_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/http_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/http_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/money_amount_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/money_amount_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/tools.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/tools.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702726646080</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="beitjalanew filter and dropdown">
+      <created>1709376285048</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709376285048</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,7 +126,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixes" />
     <MESSAGE value="beitjala" />
-    <option name="LAST_COMMIT_MESSAGE" value="beitjala" />
+    <MESSAGE value="beitjalanew filter and dropdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="beitjalanew filter and dropdown" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

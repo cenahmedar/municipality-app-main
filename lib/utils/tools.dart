@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:intl/intl.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Tools {
   static double? formatDouble(num? value) => value == null ? null : value * 1.0;
@@ -72,14 +71,6 @@ class Tools {
   // ignore: always_declare_return_types
   static showSnackBar(BuildContext context, message) {
     ScaffoldMessenger.of(context).showSnackBar(message);
-  }
-
-  static Future<void> launchURL(String? url) async {
-    if (await canLaunch(url ?? '')) {
-      await launch(url!);
-    } else {
-      throw 'Could not launch $url';
-    }
   }
 
   static Future<dynamic> parseJsonFromAssets(String assetsPath) async {
