@@ -141,5 +141,6 @@
   "incorrect_credentials": "اسم المستخدم أو كلمة المرور غير صحيحة",
   "incorrect_verification_code": "رمز التحقق غير صحيح",
   "shekels": "شيكل",
-  "invoice_number": "فاتورة رقم"
+  "invoice_number": "فاتورة رقم",
+  "service_no": "رقم اشتراك"
 }

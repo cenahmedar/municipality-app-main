@@ -10,10 +10,12 @@ class MoneyAmountCardWidget extends StatelessWidget {
   final String sourcePage;
   final String? title;
   final String titleValue;
+  final String serviceNo;
   final String amount;
 
   MoneyAmountCardWidget({
     required this.titleValue,
+    required this.serviceNo,
     required this.amount,
     required this.sourcePage,
     this.title,
@@ -34,10 +36,20 @@ class MoneyAmountCardWidget extends StatelessWidget {
 
   List<Widget> _getDescription(BuildContext context) {
     return [
-      Row(
+      Column(
         children: [
-          ...(title != null ? [Text(title!), SizedBox(width: 8)] : []),
-          Text(titleValue),
+          Row(
+            children: [
+              ...(title != null ? [Text(title!), SizedBox(width: 8)] : []),
+              Text(titleValue),
+            ],
+          ),
+          Row(
+            children: [
+              Text(I18n.of(context)!.service_no), SizedBox(width: 8),
+              Text(serviceNo),
+            ],
+          ),
         ],
       ),
     ];

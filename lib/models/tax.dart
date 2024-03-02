@@ -10,6 +10,9 @@ class Tax {
   @JsonKey(name: 'taxName')
   final String taxName;
 
+  @JsonKey(name: 'serviceNo')
+  final String serviceNo;
+
   @JsonKey(name: 'ptid')
   final String ptid;
 
@@ -20,6 +23,7 @@ class Tax {
     required this.taxAmount,
     required this.taxName,
     required this.ptid,
+    required this.serviceNo,
     this.taxDate,
   });
 

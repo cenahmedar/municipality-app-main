@@ -31,7 +31,8 @@ class HttpUtil {
           await SharedPreferencesUtil.getString(SharedPreferencesConstants.JWT);
 
       if (token != null &&
-          ![Apis.REFRESH_TOKEN, Apis.SIGN_IN].contains(options.path)) {
+          ![Apis.REFRESH_TOKEN, Apis.SIGN_IN, Apis.VERIFY_CODE, Apis.SIGNUP_USER
+            , Apis.CHANGE_PASSWORD, Apis.FORGOT_PASSWORD].contains(options.path)) {
         if (!JwtDecoder.isExpired(token)) {
           handler.next(options
             ..headers.addAll({

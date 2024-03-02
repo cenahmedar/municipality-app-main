@@ -7,6 +7,7 @@ import 'package:municipality_app/widgets/money_amount_card.dart';
 import 'package:municipality_app/widgets/main_app_bar.dart';
 import 'package:municipality_app/widgets/menu_drawer.dart';
 
+import '../widgets/bills_filter_card.dart';
 import 'jawwal_pay_service/screens/jawwal_pay_page.dart';
 
 class MyTaxesPage extends StatefulWidget {
@@ -16,7 +17,10 @@ class MyTaxesPage extends StatefulWidget {
 
 class _MyTaxesPageState extends State<MyTaxesPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final ScrollController _scrollController = ScrollController();
+  List<Tax> _filteredTaxes = [];
   List<Tax> _taxes = [];
+  List<String?> _serviceNos = [];
   BillsService _billsService = BillsService();
   bool _loading = true;
   JawwalPayService _jawwalPayService = JawwalPayService();
@@ -26,6 +30,8 @@ class _MyTaxesPageState extends State<MyTaxesPage> {
     Future.delayed(Duration.zero, () async {
       try {
         _taxes = await _billsService.getTaxes() ?? [];
+        _filteredTaxes = _taxes;
+        _serviceNos = _taxes.map((i) => i.serviceNo).toSet().toList();
         setState(() {
           _loading = false;
         });
@@ -33,10 +39,26 @@ class _MyTaxesPageState extends State<MyTaxesPage> {
         setState(() {
           _loading = false;
           _taxes = [];
+          _filteredTaxes = [];
         });
       }
     });
     super.initState();
+  }
+
+  void onChange(String? value) {
+    setState(() {
+      if (value == null)
+        _filteredTaxes = _taxes;
+      else
+        _filteredTaxes = _taxes.where((i) => i.serviceNo == value).toList();
+
+      _scrollController.animateTo(
+        0,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    });
   }
 
   @override
@@ -61,34 +83,47 @@ class _MyTaxesPageState extends State<MyTaxesPage> {
               ? Center(
                   child: CircularProgressIndicator(),
                 )
-              : _taxes.length == 0
+              : _filteredTaxes.length == 0
                   ? SizedBox()
-                  : CustomScrollView(
-                      physics: BouncingScrollPhysics(),
-                      slivers: [
-                        SliverList(
-                          delegate: SliverChildListDelegate(
-                            List.generate(
-                              _taxes.length,
-                              (index) => MoneyAmountCardWidget(
-                                amount: _taxes[index].taxAmount.toString(),
-                                titleValue: _taxes[index].taxName,
-                                sourcePage: I18n.of(context)!.my_bills,
-                                onClick: () async {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) => JawwalPayPage(
-                                        jawwalPayArgs: JawwalPayArgs(
-                                          paymentType: PaymentType.TAX,
-                                          id: _taxes[index].ptid,
-                                          amount: _taxes[index].taxAmount,
-                                        ),
-                                      ),
+                  : Column(
+                      children: [
+                        BillsFilterCard(
+                            dropdownItems: _serviceNos, onChanged: onChange),
+                        Expanded(
+                          child: CustomScrollView(
+                            physics: BouncingScrollPhysics(),
+                            slivers: [
+                              SliverList(
+                                delegate: SliverChildListDelegate(
+                                  List.generate(
+                                    _filteredTaxes.length,
+                                    (index) => MoneyAmountCardWidget(
+                                      amount: _filteredTaxes[index]
+                                          .taxAmount
+                                          .toString(),
+                                      titleValue: _filteredTaxes[index].taxName,
+                                      serviceNo:
+                                          _filteredTaxes[index].serviceNo,
+                                      sourcePage: I18n.of(context)!.my_bills,
+                                      onClick: () async {
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) => JawwalPayPage(
+                                              jawwalPayArgs: JawwalPayArgs(
+                                                paymentType: PaymentType.TAX,
+                                                id: _filteredTaxes[index].ptid,
+                                                amount: _filteredTaxes[index]
+                                                    .taxAmount,
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      },
                                     ),
-                                  );
-                                },
+                                  ).toList(),
+                                ),
                               ),
-                            ).toList(),
+                            ],
                           ),
                         ),
                       ],

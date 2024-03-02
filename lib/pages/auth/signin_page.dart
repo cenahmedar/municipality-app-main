@@ -12,6 +12,8 @@ import 'package:municipality_app/generated/i18n.dart';
 import 'package:municipality_app/utils/snackbar.dart';
 import 'package:provider/provider.dart';
 
+import '../../main/main.dart';
+
 class SignInPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _SignInPageState();
@@ -48,12 +50,12 @@ class _SignInPageState extends State<SignInPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: 48),
+                  SizedBox(height: 10),
                   Image.asset(
                     config?.logo ?? '',
-                    height: 120,
+                    height: 100,
                   ),
-                  SizedBox(height: 28),
+                  SizedBox(height: 10),
                   Text(
                     I18n.of(context)!.sign_in,
                     style: Theme.of(context)
@@ -135,12 +137,58 @@ class _SignInPageState extends State<SignInPage> {
                         Navigator.of(context)
                             .pushNamed(Routes.SUGGESTION_COMPLAINT_PAGE);
                     },
-                  )
+                  ),
+                  _getLanguageSelector(context),
                 ],
               )),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _getLanguageSelector(context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 13),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            margin: EdgeInsets.only(right: 10, left: 10),
+            child: Text(
+              I18n.of(context)!.language,
+              style: Theme.of(context).textTheme.caption?.copyWith(
+                    fontSize: 17,
+                  ),
+            ),
+          ),
+          DropdownButton<String>(
+            value: MunicipalityApp.of(context)!.locale.languageCode,
+            iconSize: 0,
+            elevation: 16,
+            style: TextStyle(
+              color: Theme.of(context).primaryColor,
+            ),
+            underline: Container(
+              height: 2,
+              color: Theme.of(context).primaryColor,
+            ),
+            onChanged: (String? newValue) {
+              MunicipalityApp.of(context)!.setLocale(Locale(newValue ?? 'ar'));
+            },
+            items: <String>['en', 'ar']
+                .map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(
+                  value,
+                  textAlign: TextAlign.center,
+                ),
+              );
+            }).toList(),
+          ),
+        ],
       ),
     );
   }

@@ -486,6 +486,8 @@ class I18n implements WidgetsLocalizations {
   /// "Invoice number"
   String get invoice_number => "Invoice number";
 
+  String get service_no => "Service no";
+
   @override
   // TODO: implement reorderItemDown
   String get reorderItemDown => throw UnimplementedError();
@@ -1109,6 +1111,10 @@ class _I18n_ar_AR extends I18n {
   /// "فاتورة رقم"
   @override
   String get invoice_number => "فاتورة رقم";
+
+  /// "رقم اشتراك"
+  @override
+  String get service_no => "رقم اشتراك";
 }
 
 class GeneratedLocalizationsDelegate

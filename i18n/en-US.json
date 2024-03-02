@@ -141,5 +141,6 @@
   "incorrect_credentials": "Incorrect username or password",
   "incorrect_verification_code": "The verification code is not correct",
   "shekels": "NIS",
-  "invoice_number": "Invoice number"
+  "invoice_number": "Invoice number",
+  "service_no": "Service no"
 }

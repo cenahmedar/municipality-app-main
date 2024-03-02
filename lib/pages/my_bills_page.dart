@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:municipality_app/generated/i18n.dart';
 import 'package:municipality_app/models/bill.dart';
 import 'package:municipality_app/services/bills_service.dart';
-import 'package:municipality_app/services/jawwal_pay_service.dart';
 import 'package:municipality_app/widgets/money_amount_card.dart';
 import 'package:municipality_app/widgets/main_app_bar.dart';
 import 'package:municipality_app/widgets/menu_drawer.dart';
 
+import '../widgets/bills_filter_card.dart';
 import 'jawwal_pay_service/screens/jawwal_pay_page.dart';
 
 class MyBillsPage extends StatefulWidget {
@@ -16,7 +16,10 @@ class MyBillsPage extends StatefulWidget {
 
 class _MyBillsPageState extends State<MyBillsPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final ScrollController _scrollController = ScrollController();
+  List<Bill> _filteredBills = [];
   List<Bill> _bills = [];
+  List<String?> _serviceNos = [];
   BillsService _billsService = BillsService();
   bool _loading = true;
 
@@ -25,6 +28,12 @@ class _MyBillsPageState extends State<MyBillsPage> {
     Future.delayed(Duration.zero, () async {
       try {
         _bills = await _billsService.getBills() ?? [];
+        _filteredBills = _bills;
+        _serviceNos = _bills
+            .where((i) => i.serviceNo != null)
+            .map((i) => i.serviceNo)
+            .toSet()
+            .toList();
         setState(() {
           _loading = false;
         });
@@ -32,10 +41,26 @@ class _MyBillsPageState extends State<MyBillsPage> {
         setState(() {
           _loading = false;
           _bills = [];
+          _filteredBills = [];
         });
       }
     });
     super.initState();
+  }
+
+  void onChange(String? value) {
+    setState(() {
+      if (value == null)
+        _filteredBills = _bills;
+      else
+        _filteredBills = _bills.where((i) => i.serviceNo == value).toList();
+
+      _scrollController.animateTo(
+        0,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    });
   }
 
   @override
@@ -54,7 +79,7 @@ class _MyBillsPageState extends State<MyBillsPage> {
           ? Center(
               child: CircularProgressIndicator(),
             )
-          : _bills.length == 0
+          : _filteredBills.length == 0
               ? SizedBox()
               : SafeArea(
                   child: Padding(
@@ -62,33 +87,49 @@ class _MyBillsPageState extends State<MyBillsPage> {
                       vertical: 22,
                       horizontal: 16,
                     ),
-                    child: CustomScrollView(
-                      physics: BouncingScrollPhysics(),
-                      slivers: [
-                        SliverList(
-                          delegate: SliverChildListDelegate(
-                            List.generate(
-                              _bills.length,
-                              (index) => MoneyAmountCardWidget(
-                                amount: _bills[index].invoiceAmount.toString(),
-                                title: I18n.of(context)!.invoice_number,
-                                titleValue: _bills[index].invoiceNo ?? '',
-                                sourcePage: I18n.of(context)!.my_bills,
-                                onClick: () async {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) => JawwalPayPage(
-                                        jawwalPayArgs: JawwalPayArgs(
-                                          paymentType: PaymentType.BILL,
-                                          id: _bills[index].invoiceNo,
-                                          amount: _bills[index].invoiceAmount,
-                                        ),
-                                      ),
+                    child: Column(
+                      children: [
+                        BillsFilterCard(
+                            dropdownItems: _serviceNos, onChanged: onChange),
+                        Expanded(
+                          child: CustomScrollView(
+                            controller: _scrollController,
+                            physics: BouncingScrollPhysics(),
+                            slivers: [
+                              SliverList(
+                                delegate: SliverChildListDelegate(
+                                  List.generate(
+                                    _filteredBills.length,
+                                    (index) => MoneyAmountCardWidget(
+                                      amount: _filteredBills[index]
+                                          .invoiceAmount
+                                          .toString(),
+                                      title: I18n.of(context)!.invoice_number,
+                                      titleValue:
+                                          _filteredBills[index].invoiceNo ?? '',
+                                      serviceNo:
+                                          _filteredBills[index].serviceNo ?? '',
+                                      sourcePage: I18n.of(context)!.my_bills,
+                                      onClick: () async {
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) => JawwalPayPage(
+                                              jawwalPayArgs: JawwalPayArgs(
+                                                paymentType: PaymentType.BILL,
+                                                id: _filteredBills[index]
+                                                    .invoiceNo,
+                                                amount: _filteredBills[index]
+                                                    .invoiceAmount,
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      },
                                     ),
-                                  );
-                                },
+                                  ).toList(),
+                                ),
                               ),
-                            ).toList(),
+                            ],
                           ),
                         ),
                       ],
@@ -96,5 +137,28 @@ class _MyBillsPageState extends State<MyBillsPage> {
                   ),
                 ),
     );
+  }
+}
+
+class DropdownHeader extends SliverPersistentHeaderDelegate {
+  final Widget child;
+
+  DropdownHeader({required this.child});
+
+  @override
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return child;
+  }
+
+  @override
+  double get maxExtent => 100.0; // Adjust the height of the header
+
+  @override
+  double get minExtent => 100.0; // Adjust the height of the header
+
+  @override
+  bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
+    return false;
   }
 }

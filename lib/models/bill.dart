@@ -14,6 +14,9 @@ class Bill {
   @JsonKey(name: 'invoiceNo')
   final String? invoiceNo;
 
+  @JsonKey(name: 'serviceNo')
+  final String? serviceNo;
+
   @JsonKey(name: 'invoiceDate')
   final String? invoiceDate;
 
@@ -22,6 +25,7 @@ class Bill {
     required this.lateFees,
     this.invoiceNo,
     this.invoiceDate,
+    this.serviceNo,
   });
 
   static double stringToDouble(dynamic value) =>
